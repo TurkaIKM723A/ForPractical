@@ -42,6 +42,36 @@ for (int i = 0; i < size; ++i) {
 
 double aver = static_cast<double>(sum) / size; 
 
+void Sort(int arr[], int size); {
+
+    for (int i = 0; i < size - 1; ++i) {
+
+        for (int j = 0; j < size - i - 1; ++j) {
+
+            if (arr[j] > arr[j + 1]) {
+
+                int temp = arr[j];
+
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
+cout << "Array to be sorted: " << '\n';
+
+for (int i = 0; i < size; ++i) {
+
+    cout << arr[i] << " " << '\n';
+
+}
+cout << "Sorted array: " ;
+
+for (int i = 0; i < size; ++i) {
+
+    cout << arr[i] << " " << '\n';
+}
 
 cout << "The sum of the all array elements is " << sum << '\n';
 cout << " " << '\n';
