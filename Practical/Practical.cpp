@@ -42,12 +42,43 @@ for (int i = 0; i < size; ++i) {
 
 double aver = static_cast<double>(sum) / size; 
 
+
 cout << "The sum of the all array elements is " << sum << '\n';
 cout << " " << '\n';
 cout << "The min element of the array is " << min << '\n';
 cout << "The max element of the array is " << max << '\n';
 cout << " " << '\n';
 cout << "The average value of the array elements is " << aver << '\n';
+cout << " " << '\n';
+cout << "Try to guess the random number of this array. Write random number down bellow." << '\n';
+
+int ran_num;
+
+cin >> ran_num;
+
+bool found = false;
+
+
+for (int i = 0; i < size; ++i) {
+
+    if (arr[i] == ran_num) {
+
+        found = true;
+
+        break;
+    }
+}
+
+if (found) {
+
+    cout << "The element " << ran_num << " is found in the array." << '\n';
+
+}
+else {
+
+    cout << "The elemnt " << ran_num << " is not found in the array." << '\n';
+
+}
 
 return 0;
 
